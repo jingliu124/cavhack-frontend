@@ -2,8 +2,8 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { Navbar, NavItem, Nav } from 'react-bootstrap'
-
 import MyProfileContainer from './containers/MyProfileContainer'
+import OtherProfileContainer from './containers/OtherProfileContainer'
 import AllProfilesContainer from './containers/AllProfilesContainer'
 
 class App extends Component {
@@ -18,7 +18,21 @@ class App extends Component {
     return (
       <div>
         {/* ! ADD NAVBAR HERE */}
-
+        <Navbar>
+          <Navbar.Header>
+            <Navbar.Brand>
+              My Profile
+            </Navbar.Brand>
+          </Navbar.Header>
+          <Nav>
+            <NavItem href="/">
+              Home
+            </NavItem>
+            <NavItem href="/profiles">
+              All Profiles
+            </NavItem>
+          </Nav>
+        </Navbar>
 
         {/* router to navigate between pages, each page is a container */}
         <Switch>
@@ -33,10 +47,15 @@ class App extends Component {
               <AllProfilesContainer history={this.props.history} />
             )}
           />
+          <Route path="/1"
+            render={() => (
+              <OtherProfileContainer history={this.props.history} />
+            )}
+          />
         </Switch>
       </div>
-    );
-  }
-}
-
-export default App;
+        );
+      }
+    }
+    
+    export default App;

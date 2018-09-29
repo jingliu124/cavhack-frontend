@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #fafafa;
+  background-color: rgb(255, 227, 253);
 }
 
 .padding--sm {
@@ -62,4 +62,30 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+#name{
+  color:purple;
+  font-weight:bold;
+}
+
+#about-me{
+  font-size:125%;
+}
+
+.header{
+  color:rgb(75, 0, 75);
+  font-weight:bold;
+}
+
+li, .school{
+  font-size:125%;
+}
+
+.test{
+  background-color: rgb(253, 201, 250);
+}
+
+.back{
+  background-color: rgb(176, 230, 255);
 }
